@@ -9,7 +9,9 @@ const employeeRoutes = require("./routes/employee");
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(cors);
+app.use(cors({
+    origin: 'http://localhost:3000'
+}));
 
 const PORT = process.env.PORT || 8081;
 
